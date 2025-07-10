@@ -1,0 +1,282 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a1931;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  font-family: 'Press Start 2P', cursive; /* Fuente estilo retro de Mario */
+  background: url('imag/mario_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+/* Fondo con gradiente en el menú de selección de nivel */
+#levelSelection {
+  background: linear-gradient(135deg, #05c1f5, #fad0c4); /* Gradiente de rosa a durazno */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  transition: background 0.5s ease-in-out; /* Suaviza el cambio de fondo */
+  
+}
+
+/* Estilos para la selección de nivel */
+/* Estilos para la selección de nivel */
+.menu {
+  background-color: #78d8d5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.menu h2 {
+  color: #093e78;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+/* Estilo para las opciones de radio */
+.menu label {
+  display: block;
+  font-size: 1.2em;
+  color: #444;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Ocultar el botón de radio original */
+.menu input[type="radio"] {
+  display: none;
+}
+
+/* Cambiar color de fondo cuando está seleccionado */
+.menu input[type="radio"]:checked + label {
+  background-color: #0d1d92;  /* Verde */
+  color: #fff;
+  border-color: #0f58d7;
+}
+
+/* Efecto al pasar el mouse */
+.menu label:hover {
+  background-color: #f0f0f0;
+}
+
+/* Botón de inicio */
+#startButton {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#startButton:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de inicio */
+#startButton {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#startButton:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor del juego */
+.game {
+  margin-top: 20px;
+}
+
+/* Sección superior: imagen y contador */
+.top-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#hangmanContainer img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Animación al actualizar la imagen */
+.animate {
+  transform: scale(1.1);
+}
+
+#attemptsContainer {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+/* Sección de la palabra y hints */
+#wordSection {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#wordContainer {
+  font-size: 2em;
+}
+
+.letter {
+  margin: 0 5px;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+
+/* Estilos para los hints (definición o categoría) */
+.hint {
+  font-size: 1em;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+  overflow-y: auto;
+}
+
+/* TABLA DE LETRAS */
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  justify-content: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.letter-button {
+  padding: 12px;
+  font-size: 1.2em;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+  color: black;
+}
+
+.letter-button:hover {
+  background-color: #bbb;
+}
+
+/* Letras correctas e incorrectas */
+.letter-button.correct {
+  background-color: #f0f0f0; /* Verde */
+  color: black;
+}
+
+.letter-button.incorrect {
+  background-color: #f0f0f0; /* Rojo */
+  color: black;
+}
+
+/* Mensajes al usuario */
+#messageContainer {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Botones de control */
+#controlButtons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #5C85D6;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3A5BA0;
+}
+
+/* Estilos para la tabla de letras */
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.letter-button {
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.letter-button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.letter-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+#marioImage {
+  display: block; /* Se muestra en el menú */
+  width: 200px; /* Ajusta el tamaño */
+  margin: 20px auto; /* Centrado */
+}
+
+.game #marioImage {
+  display: none; /* Se oculta cuando el juego está activo */
+}
+.hidden {
+  display: none;
+}
+.hint{
+  background: linear-gradient(to bottom, rgb(112, 210, 255), #7ddbff);
+  border: none;
+  height: 4rem;
+}
+.contenedor{
+  background-color: #76d5ff;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/normalize.css">
+</head>
+<body>
+  <!-- Menú de selección de nivel -->
+  <div id="levelSelection" class="menu">
+    <h2>Selecciona el nivel de dificultad</h2>
+
+    <input type="radio" name="level" id="easy" value="easy" checked>
+    <label for="easy">Fácil</label>
+
+    <input type="radio" name="level" id="advanced" value="advanced">
+    <label for="advanced">Avanzado</label>
+
+    <br>
+    <button id="startButton">Iniciar Juego</button>
+
+  </div>
+  <img id="marioImage" src="/imag/mario.png" alt="Mario Bros">
+  <!-- Contenedor del juego -->
+  <div id="gameContainer" class="game" style="display: none;">
+    <div class="top-section">
+      <!-- Sección de la imagen animada del árbol/ahorcado -->
+      <div id="hangmanContainer">
+        <img id="hangmanImage" src="/imag/Arbol.png" alt="Estado del Ahorcado">
+      </div>
+      <!-- Contador de intentos restantes -->
+      <div id="attemptsContainer">
+        <p>Intentos restantes: <span id="attemptsCounter">5</span></p>
+      </div>
+    </div>
+
+    <!-- Sección que muestra la palabra y el hint -->
+    <div id="wordSection">
+      <div id="wordContainer"></div>
+      <div id="hintContainer">
+        <div id="definitionContainer" class="hint"></div>
+      </div>
+    </div>
+
+    <!-- Tabla de letras -->
+    <div id="letterTable">
+      <!-- Se generará dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Mensajes al usuario -->
+    <div id="messageContainer"></div>
+
+    <!-- Botones de control -->
+    <div id="controlButtons">
+      <button id="exitButton">Menu</button>
+      <button id="nextButton">Siguiente</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
